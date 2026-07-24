@@ -57,6 +57,8 @@
     color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:9999px;padding:7px 14px;}
 
   .fig{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface);margin-top:16px;}
+  .fig img{width:100%;display:block;background:#0d0d0f;}
+  .fig figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;padding:10px 14px;}
   .fig.illus{background:#FBFBFA;}
   .fig.illus svg{width:100%;height:auto;display:block;}
   .fig.illus.hero{border:0;background:transparent;margin-top:30px;}
@@ -217,7 +219,7 @@
           <rect x="416" y="182" width="180" height="12" rx="6" fill="#787774"/>
           <rect x="416" y="206" width="240" height="12" rx="6" fill="#C4BFB7"/>
           <g><rect x="416" y="238" width="176" height="34" rx="17" fill="#FBECE1" stroke="#B4481F" stroke-width="2"/>
-          <text x="504" y="260" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="700" fill="#B4481F">/morning note</text></g>
+          <text x="504" y="260" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="700" fill="#B4481F">/morning-note</text></g>
 
           <!-- arrow to analysis -->
           <path d="M700 210 h34 M726 201 l10 9 l-10 9" fill="none" stroke="#346538" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -250,52 +252,60 @@
         <div class="step-n">1</div>
         <div>
           <h3>Öppna Cowork i Claude-appen</h3>
-          <p>Öppna <b>Claude Desktop</b> på datorn och välj <b>Cowork</b> i lägesväljaren. Det är där pluginsen bor. Cowork är samma motor som Claude Code, fast utan terminal.</p>
+          <p>Öppna <b>Claude Desktop</b> på datorn och välj <b>Cowork</b> i lägesväljaren. Det är där pluginsen bor.</p>
+          <figure class="fig reveal">
+            <img src="images/steg1-cowork.jpg" alt="Claudes textruta med lägesväljaren Chat och Cowork, där Cowork är markerat med en röd etta">
+            <figcaption>Steg 1 · välj Cowork i lägesväljaren</figcaption>
+          </figure>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-n">2</div>
         <div>
-          <h3>Gå till plugin-listan</h3>
-          <p>Klicka på <b>Customize</b> i vänsterkanten, sen <b>Browse plugins</b>. Det öppnar listan där du lägger till och installerar plugins.</p>
+          <h3>Öppna Customize</h3>
+          <p>Klicka på <b>Customize</b> längst ner i vänsterkanten.</p>
+          <figure class="fig reveal">
+            <img src="images/steg2-customize.jpg" alt="Claudes vänsterpanel med Customize markerat med en röd tvåa">
+            <figcaption>Steg 2 · Customize i vänsterkanten</figcaption>
+          </figure>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-n">3</div>
         <div>
-          <h3>Lägg till Anthropics finans-marketplace</h3>
-          <p>Välj <b>Personal</b>, tryck på <b>plus-tecknet</b>, välj <b>Add marketplace from GitHub</b> och klistra in adressen nedan. Det är Anthropics egen officiella katalog med finans-plugins.</p>
-          <div class="prompt">
-            <div class="prompt-bar"><span class="lbl">Adressen · kopiera</span><button class="prompt-copy" type="button">Kopiera</button></div>
-            <pre>https://github.com/anthropics/financial-services</pre>
-          </div>
+          <h3>Gå till Plugins och tryck Browse</h3>
+          <p>Välj <b>Plugins (1)</b> i listan, tryck sen på <b>Browse (2)</b> uppe till höger. Det öppnar katalogen med alla plugins.</p>
+          <figure class="fig reveal">
+            <img src="images/steg3-plugins.jpg" alt="Plugin-sidan med Plugins valt i sidopanelen och Browse-knappen uppe till höger, båda markerade">
+            <figcaption>Steg 3 · Plugins, sen Browse</figcaption>
+          </figure>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-n">4</div>
         <div>
-          <h3>Installera kärn-pluginen först</h3>
-          <p>Installera <b>Financial analysis (core)</b> först. Den innehåller själva kopplingarna till dataleverantörerna, bland andra <b>FactSet, Daloopa, Morningstar och S&amp;P</b>, och flera till. De andra pluginsen bygger på den, så den ska in först.</p>
-          <div class="note blue"><span class="lb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><span>Att installera kopplingen är gratis, men de fyra namnen är <b>dataleverantörer</b>. För att dra deras premiumdata krävs ett eget abonnemang hos leverantören. Har du inget sådant jobbar Claude på publik data i stället, samma sak, fast med det som finns öppet.</span></div>
+          <h3>Välj Partners, sök och lägg till</h3>
+          <p>Byt till fliken <b>Partners (1)</b>, sök på <b>financial (2)</b>, och lägg till pluginsen med <b>plus-tecknet (3)</b>. Ta <b>Financial Analysis</b> först, den är kärnan med själva kopplingarna. Lägg sen till de leverantörer du vill ha på samma sätt: <b>S&amp;P Global, Daloopa, LSEG</b> och fler.</p>
+          <figure class="fig reveal">
+            <img src="images/steg4-partners.jpg" alt="Plugin-katalogen på fliken Partners, med sökfältet, Partners-fliken och en plus-knapp markerade">
+            <figcaption>Steg 4 · Partners, sök, lägg till med plus</figcaption>
+          </figure>
+          <div class="note blue"><span class="lb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><span>Att installera kopplingarna är gratis. Men leverantörerna (<b>FactSet, S&amp;P, Daloopa</b> med flera) är betaltjänster: för att dra deras premiumdata krävs ett eget abonnemang hos leverantören. Har du inget kör Claude på publik data i stället, som i exemplet nedan.</span></div>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-n">5</div>
         <div>
-          <h3>Lägg till fler arbetsflöden om du vill</h3>
-          <p>Vill du ha färdiga upplägg finns fler plugins i samma katalog: <b>Equity research</b>, <b>Investment banking</b>, <b>Private equity</b> och <b>Wealth management</b>. Installera de du behöver, hoppa resten.</p>
-        </div>
-      </div>
-
-      <div class="step reveal">
-        <div class="step-n">6</div>
-        <div>
           <h3>Fråga Claude om ett företag</h3>
-          <p>Nu kan du använda skillsen. Skriv <span class="kbd">/morning note</span> och ett företagsnamn för en snabb morgonbriefing om läget. Vill du ha den tunga genomlysningen med <b>free cash flow, marginaler och intäkter</b> använder du skillsen för equity research och earnings analysis, de är byggda för just det.</p>
+          <p>Nu kan du använda skillsen. Skriv <span class="kbd">/morning-note</span> och ett företagsnamn, så får du en analys med <b>free cash flow, marginaler, intäkter och estimat</b>. Här bad jag om TSLA.</p>
+          <figure class="fig reveal">
+            <img src="images/steg5-morningnote.jpg" alt="Claude svarar på /morning-note tsla med en morgonnotis om Teslas kvartal, intäkter, marginaler och kassaflöde">
+            <figcaption>Exempel · /morning-note tsla</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -310,7 +320,7 @@
       <p>200 kr i månaden ger dig Claude Pro och alla finans-skills och mallar. Det räcker för att köra analyser i proffsformat på publik data, och skillsen i sig är gratis och öppna.</p>
       <p>Vill du koppla på den betalda proffsdatan (FactSet, S&amp;P med flera) kostar den separat hos varje leverantör. Så du vet vad du betalar för: 200 kr köper verktyget, inte de dyra dataabonnemangen.</p>
     </div>
-    <p class="fineprint reveal">Guiden bygger på Anthropics officiella instruktioner i juli 2026. Appen och plugin-listan kan ha ändrats sen dess. Det här är ingen finansiell rådgivning, analyserna är underlag, besluten är dina.</p>
+    <p class="fineprint reveal">Bilderna är från appen i juli 2026. Anthropic ändrar den ofta, så knappar kan flytta. Det här är ingen finansiell rådgivning, analyserna är underlag, besluten är dina.</p>
   </section>
 
   <!-- CTA -->
